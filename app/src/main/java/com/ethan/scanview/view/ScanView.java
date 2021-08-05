@@ -19,6 +19,11 @@ import com.ethan.scanview.R;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
+/**
+ * 蓝牙扫描
+ *
+ * EthanLee
+ */
 public class ScanView extends View {
     private Paint circlePaint;
     // 两圆间的半径差
@@ -141,12 +146,12 @@ public class ScanView extends View {
         if (!stopScan) invalidate();
     }
 
-    public void setScanStop(){
+    public void setScanStop() {
         if (this.stopScan) return;
         this.stopScan = true;
     }
 
-    public void setStartScan(){
+    public void setStartScan() {
         if (!this.stopScan) return;
         this.stopScan = false;
         invalidate();
