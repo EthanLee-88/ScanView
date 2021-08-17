@@ -130,6 +130,7 @@ public class ScanView extends View {
             pointPaint.setColor(pointPosition.pointColor);
             if (pointList.indexOf(pointPosition) == pointList.size() - 1) {
                 canvas.drawCircle(pointPosition.getPoint().x, pointPosition.getPoint().y, spaceBetweenCircle >> 1, pointPaint);
+                continue;
             }
             canvas.drawCircle(pointPosition.getPoint().x, pointPosition.getPoint().y, spaceBetweenCircle >> 2, pointPaint);
         }

@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.ethan.scanview.view.PointPosition;
+import com.ethan.scanview.view.PointPositionKt;
 import com.ethan.scanview.view.ScanView;
+import com.ethan.scanview.view.ScanViewKt;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    private ScanView mScanView;
+    private ScanViewKt mScanView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void viewClick(View view) {
-        mScanView.addPoint(new PointPosition().setRank(new Random().nextInt(80)));
+        mScanView.addPoint(new PointPositionKt().setRank(new Random().nextInt(80)));
     }
 
     public void buttonClick(View view) {
